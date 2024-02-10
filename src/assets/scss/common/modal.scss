@@ -1,0 +1,82 @@
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+
+    &__block {
+        max-width: 312px;
+        width: 100%;
+        padding: 25px;
+        background: linear-gradient(0deg, rgba(103, 80, 164, 0.11), rgba(103, 80, 164, 0.11)), #FFFBFE;
+        border-radius: 28px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.33;
+        color: #1C1B1F;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin-top: 16px;
+        margin-bottom: 25px;
+
+        & label {
+            position: relative;
+        }
+
+        & span {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.33;
+            color: #6750A4;
+        }
+
+        & textarea,
+        & input {
+            border: none;
+            outline: none;
+            resize: none;
+            background: #E7E0EC;
+            border-radius: 4px 4px 0px 0px;
+            width: 100%;
+            padding: 23px 16px 9px 16px;
+            border-bottom: 1px solid #6750A4;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #49454F;
+        }
+    }
+
+    &__btns {
+        @include btns;
+    }
+
+    &__btn {
+        @include btn;
+    }
+
+    &__close {
+        @include btn-red;
+    }
+
+    &__add,
+    &__edit {
+        @include btn-purple;
+    }
+}

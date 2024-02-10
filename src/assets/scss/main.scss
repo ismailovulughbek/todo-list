@@ -1,0 +1,76 @@
+@import './fonts.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    outline: none;
+    border: none;
+}
+
+.container {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@mixin btns {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
+}
+
+@mixin btn {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    column-gap: 10px;
+    background: transparent;
+    border-radius: 5px;
+    text-transform: uppercase;
+
+    & span {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.43;
+    }
+}
+
+@mixin btn-purple {
+    color: #6750A4;
+
+    &:hover {
+        background: rgba(102, 80, 164, 0.3);
+    }
+}
+
+@mixin btn-red {
+    color: #CF1B1B;
+
+    &:hover {
+        background: rgba(207, 27, 27, 0.3);
+    }
+}
+
+
+@import './common.scss';
